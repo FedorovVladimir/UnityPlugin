@@ -4,15 +4,11 @@ using UnityEditor;
 
 public class EnemyDesignerWindow : EditorWindow
 {
-    // Start is called before the first frame update
-    void Start()
+    [MenuItem("Window/Empty Designer")]
+    static void OpenWindow()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        EnemyDesignerWindow window = (EnemyDesignerWindow) GetWindow(typeof(EnemyDesignerWindow));
+        window.minSize = new Vector2(600, 300);
+        window.Show();
     }
 }
